@@ -1,38 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import Login from './components/Login';
+import Register from './components/Register';
+import Dashboard from './components/Dashboard';
 
 function App() {
-  const [message, setMessage] = useState('');
-  const [isBackendConnected, setIsBackendConnected] = useState(false);
-
-  useEffect(() => {
-    fetch('/api')
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error('Network response was not ok');
-      })
-      .then(data => {
-        setMessage(data.message);
-        setIsBackendConnected(true);
-      })
-      .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-        setIsBackendConnected(false);
-      });
-  }, []);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        {isBackendConnected ? (
-          <h1>{message}</h1>
-        ) : (
-          <h1>Unable to connect to the back-end</h1>
-        )}
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
