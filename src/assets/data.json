@@ -32,6 +32,29 @@
     "code": "4567.8901.2345",
     "pay": "FR",
     "activity": "Banque postale",
-    "adress": "115 Rue de Sèvres, Paris"
+    "adress": "115 Rue de Sèvres, Paris",
+    "phone": "0605349963",
+    "email": "arthur.dias@live.fr",
+    "fax": "0899634284",
+    "web": "https://youtube.com",
+    "files": {
+      "2023": {
+        "File - 1": "url/file1",
+        "File - 2": "url/file2",
+        "File - 3": "url/file3",
+        "File - 4": "url/file4",
+        "File - 5": "url/file5",
+        "File - 6": "url/file6",
+        "File - 14": "url/file7"
+      },
+      "2024": {
+        "File - 1": "url/file1",
+        "File - 2": "url/file2",
+        "File - 3": "url/file3",
+        "File - 4": "url/file4",
+        "File - 5": "url/file5",
+        "File - 6": "url/file6"
+      }
+    }
   }
 ]

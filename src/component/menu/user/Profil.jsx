@@ -14,13 +14,9 @@ function Profil(props) {
     const mode = useSelector((state) => state.darkMode.value)
 
     const changeMode = (value) => {
-        // console.log(value)
         dispatch(defineMode(value))
     }
 
-    useEffect(() => {
-        console.log(mode)
-    }, [mode]);
 
 
     return (
@@ -28,7 +24,6 @@ function Profil(props) {
             <Typography fontSize={24}>Hello {firstName}, {lastName}</Typography>
             <Box className="flex flex-col">
                 <SwitchInput label={"Dark Mode"} value={mode} setValue={changeMode}/>
-                {/*<SwitchInput label={"Layout Grid"}/>*/}
             </Box>
             <SubmitInput value="Logout" onClick={() => {
                 console.log("Logout")}}/>

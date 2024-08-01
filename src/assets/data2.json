@@ -1,0 +1,37 @@
+{
+  "0257.883.408": {
+    "name": "IPSSI",
+    "description": "IPSSI est une école d'informatique. Elle propose des formations en alternance et en initial dans les domaines du développement web, du webmarketing, du design graphique et de la communication digitale.IPSSI est une école d'informatique. Elle propose des formations en alternance et en initial dans les domaines du développement web, du webmarketing, du design graphique et de la communication digitale.IPSSI est une école d'informatique. Elle propose des formations en alternance et en initial dans les domaines du développement web, du webmarketing, du design graphique et de la communication digitale.",
+
+    "director": "M. Toto",
+    "founded": "1998",
+    "employees": "50",
+    "activity": "Formation",
+    "juridical": {
+      "status": "En activité",
+      "file": "file/juridical/ipssi.pdf",
+      "legal_form": "SAS",
+      "capital": "100 000 €"
+    },
+    "contact": {
+      "address": "25 Rue Claude Tillier, 75012 Paris",
+      "phone": "01 55 43 26 65",
+      "email": "contact@ipssi.com",
+      "website": "https://www.ipssi.com/"
+    },
+    "financial": [
+      {
+        "year": "2024",
+        "ca": "1 000 000 €"
+      },
+      {
+        "year": "2023",
+        "ca": "800 000 €"
+      },
+      {
+        "year": "2022",
+        "ca": "600 000 €"
+      }
+    ]
+  }
+}

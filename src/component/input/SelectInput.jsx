@@ -10,7 +10,7 @@ function SelectInput({icon, value, setValue, listSelect, placeholder}) {
                 {icon}
             </Box>
             <select className="flex-1" value={value} onChange={(e) => setValue(e.target.value)}>
-                <option value={null}>--{placeholder}--</option>
+                <option value={undefined}>--{placeholder}--</option>
 
                 {listSelect.map((item, index) => (
                     <option key={index} value={item}>{item}</option>

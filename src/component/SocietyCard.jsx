@@ -22,8 +22,8 @@ function SocietyCard({society, onClick}) {
             <Tooltip title={society.activity}>
                 <Typography className="truncate" fontSize={12} color="primary">{society.activity}</Typography>
             </Tooltip>
-            <Tooltip title={society.adress}>
-                <Typography className="truncate">{society.adress}</Typography>
+            <Tooltip title={society.contact.address}>
+                <Typography className="truncate">{society.contact.address}</Typography>
             </Tooltip>
         </Box>
     );

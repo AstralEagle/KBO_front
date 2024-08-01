@@ -24,7 +24,7 @@ const getDesignTokens = (mode) => ({
             background_header:{
                 default: DarkBackground,
             },
-            divider: amber[200],
+            divider: "#847979",
             reversText: {
                 primary: "#fff",
             },

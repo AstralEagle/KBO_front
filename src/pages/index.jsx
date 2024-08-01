@@ -6,6 +6,7 @@ import TextInput from "../component/input/TextInput.jsx";
 import SelectInput from "../component/input/SelectInput.jsx";
 import SubmitInput from "../component/input/SubmitInput.jsx";
 import SocietyCard from "../component/SocietyCard.jsx";
+import useDataGetSocieties from "../hook/useDataGetSocieties.jsx";
 
 import data from "../assets/data.json"
 
@@ -13,7 +14,9 @@ function Index(props) {
     const navigate = useNavigate()
 
     const [searchValue, setSearchValue] = useState("")
-    const [activityValue, setActivityValue] = useState(null)
+    const [activityValue, setActivityValue] = useState(undefined)
+
+    const {societies} = useDataGetSocieties()
 
     const onClickCard = (id) => {
         navigate(`society/${id}`)
@@ -32,7 +35,7 @@ function Index(props) {
 
             <Box className="flex-1 flex flex-wrap gap-[20px] justify-center content-baseline">
                 {
-                    data.map((society, i) => (
+                    societies.map((society, i) => (
                         <SocietyCard society={society} key={i} onClick={onClickCard}/>
                     ))
                 }
