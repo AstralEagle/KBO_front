@@ -9,13 +9,13 @@ function SocietyCard({society, onClick}) {
             borderColor: "primary.main",
             bgcolor: "background.secondary",
             boxShadow: `0 0 19px 4px ${theme.palette.secondary.main}1C`,
-        }} className="flex flex-col p-[20px] rounded-[20px] h-[137px] w-[290px] cursor-pointer" onClick={() => onClick(society.code.replaceAll(".",""))}>
+        }} className="flex flex-col p-[20px] rounded-[20px] h-[137px] w-[290px] cursor-pointer" onClick={() => onClick(society.companyNumber.replaceAll(".",""))}>
             <Box className="flex flex-col">
                 <Tooltip title={society.name}>
-                    <Typography fontSize={20} fontWeight={800} className="truncate" color="text.primary">{society.name}</Typography>
+                    <Typography fontSize={20} fontWeight={800} className="truncate" color="text.primary">{society.companyName}</Typography>
                 </Tooltip>
                 <Box className="flex justify-between">
-                    <Typography color="text.secondary" fontSize={14}>{society.code}</Typography>
+                    <Typography color="text.secondary" fontSize={14}>{society.companyNumber}</Typography>
                     <Typography>.</Typography>
                 </Box>
             </Box>

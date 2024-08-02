@@ -30,6 +30,10 @@ const useDataGetUser = () => {
         }
     }
 
+    const logout = () => {
+        dispatch(userLogin(null));
+    }
+
     useEffect(() => {
         if(token)
             getUser(token)
@@ -50,7 +54,8 @@ const useDataGetUser = () => {
     return {
         user,
         signup,
-        login
+        login,
+        logout
     }
 }
 

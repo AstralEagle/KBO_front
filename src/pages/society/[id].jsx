@@ -8,6 +8,7 @@ import GlobalView from "../../component/detail/GlobalView.jsx";
 import InfoView from "../../component/detail/InfoView.jsx";
 import FileView from "../../component/detail/FileView.jsx";
 import useDataGetSociety from "../../hook/useDataGetSociety.jsx";
+import Loading from "../../template/Loading.jsx";
 
 function Id(props) {
     const {id} = useParams();
@@ -32,10 +33,7 @@ function Id(props) {
         );
     else
         return (
-            <Box className="flex-1 flex flex-col items-center justify-center">
-                <Typography color="error" fontWeight={800} fontSize={78}>404</Typography>
-                <Typography color="text.primary" fontWeight={800} fontSize={48}>Society not found</Typography>
-            </Box>
+            <Loading/>
         )
 
 }

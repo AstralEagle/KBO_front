@@ -26,7 +26,7 @@ function Index() {
     }
 
     return (
-        <Box className="pages flex flex-col items-center p-[20px] gap-[20px]">
+        <Box className="pages flex flex-col items-center p-[20px] gap-[20px] flex-1 overflow-hidden pb-0">
             <Box className="flex gap-[15px]">
                 <SelectInput icon={<Input/>} placeholder=" Filter by " listSelect={filterInput}
                              value={activityValue} setValue={setActivityValue}/>
@@ -34,7 +34,7 @@ function Index() {
                 <SubmitInput value="Search" onClick={onSubmitFilter}/>
             </Box>
 
-            <Box className="flex-1 flex flex-wrap gap-[40px] justify-center content-baseline">
+            <Box className="flex-1 flex flex-wrap gap-[40px] justify-center content-baseline overflow-y-auto pb-[20px]">
                 {
                     societies.map((society, i) => (
                         <SocietyCard society={society} key={i} onClick={onClickCard}/>

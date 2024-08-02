@@ -28,10 +28,13 @@ function InfoView({society}) {
             <Box className="flex flex-col gap-[10px] p-[20px]">
                 {tabValue === 0 ?
                     (<>
+                        {
+                            society.director !== "" &&
                         <Box className="flex gap-[10px] items-center">
                             <Typography fontWeight={800}>{society.director}</Typography>
                             <Typography color="primary">Director</Typography>
                         </Box>
+                        }
                     </>):
                     (<>
                         {society.capital.map((finace,i) => (

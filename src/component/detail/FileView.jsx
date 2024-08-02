@@ -24,10 +24,11 @@ function InfoView({society}) {
             <Divider/>
             <Box className="flex flex-1 p-[20px] gap-[20px] items-center overflow-x-auto">
                 {
+                    society.juridical &&
                     society.juridical.map((file,i) => (
                         <Box className="flex flex-col justify-center items-center cursor-pointer" onClick={() =>  window.open(file.url, '_blank').focus()}>
                             <img src={PDF} alt="pdf image" className="flex-1"/>
-                            <Typography>{file.title}</Typography>
+                            <Typography className="">{file.title}</Typography>
                         </Box>
                     ))
                 }

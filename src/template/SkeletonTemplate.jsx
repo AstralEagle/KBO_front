@@ -11,7 +11,7 @@ const isConnected = false
 function SkeletonTemplate() {
     const navigate = useNavigate()
 
-    const {user,login,signup} = useDataGetUser()
+    const {user,login,signup, logout} = useDataGetUser()
 
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -49,8 +49,8 @@ function SkeletonTemplate() {
                 onClose={handleClose}
             >
                 {
-                    user == null ?
-                    <Profil user={user}/>
+                    user !== null ?
+                    <Profil user={user} logout={logout}/>
                      :
                      <Login login={login} signup={signup}/>
                 }
