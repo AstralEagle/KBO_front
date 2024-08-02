@@ -1,15 +1,15 @@
 import {useEffect, useState} from "react";
-
-import data from "../assets/data2.json"
+import axios from "axios";
 
 const useDataGetSociety = (id) => {
     const [society, setSociety] = useState(null)
 
     useEffect(() => {
 
-        const returnData =  data[id]
-        setSociety(returnData)
-        console.log(id)
+        (async () => {
+            const data = (await axios.get(`${import.meta.env.VITE_API_URL}/search/scrapping/${id}`)).data;
+            setSociety(data)
+        })()
     }, [id])
 
     return {

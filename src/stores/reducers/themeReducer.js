@@ -3,20 +3,17 @@ import { createSlice } from '@reduxjs/toolkit'
 export const counterSlice = createSlice({
     name: 'darkMode',
     initialState: {
-        value: false,
+        value: Boolean(localStorage.getItem('mode') === "true") || false,
     },
     reducers: {
-        changeMode: (state) => {
-            state.value = !state.value
-        },
         defineMode: (state, {payload}) => {
-            console.log(payload)
+            localStorage.setItem("mode", payload)
             state.value = payload
         }
 
     },
 })
 
-export const { changeMode, defineMode } = counterSlice.actions
+export const { defineMode } = counterSlice.actions
 
 export default counterSlice.reducer

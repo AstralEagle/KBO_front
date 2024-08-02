@@ -11,31 +11,23 @@ function InfoView({society}) {
     return (
         <Box className="flex-1 flex flex-col py-[20px] rounded-[20px]" sx={{
             boxShadow: `0 0 19px 4px ${theme.palette.secondary.main}1C`,
-            bgcolor: "white",
             border: "1px solid",
             borderColor: "primary.main",
+            bgcolor: "background.secondary",
+            color: "text.primary"
         }}
         >
 
-            <Typography className="px-[20px]" fontSize={30} fontWeight={800}>
+            <Typography className="px-[20px] pb-[20px]" fontSize={30} fontWeight={800}>
                 Fichiers
             </Typography>
-            <Tabs value={tabValue} onChange={(_e, val) => setTabValue(val)}>
-                {
-                    society.files &&
-                    Object.keys(society.files).map((name, i) => (
-                        <Tab label={name} value={name} key={i}/>
-                    ))
-                }
-            </Tabs>
             <Divider/>
-            <Box className="flex flex-1 p-[20px] gap-[20px] items-center">
+            <Box className="flex flex-1 p-[20px] gap-[20px] items-center overflow-x-auto">
                 {
-                    society.files &&
-                    Object.entries(society.files[tabValue]).map(([name,url],i) => (
-                        <Box className="flex flex-col justify-center items-center cursor-pointer" onClick={() => console.log(url)}>
+                    society.juridical.map((file,i) => (
+                        <Box className="flex flex-col justify-center items-center cursor-pointer" onClick={() =>  window.open(file.url, '_blank').focus()}>
                             <img src={PDF} alt="pdf image" className="flex-1"/>
-                            <Typography>{name}</Typography>
+                            <Typography>{file.title}</Typography>
                         </Box>
                     ))
                 }

@@ -5,11 +5,7 @@ import SubmitInput from "../../input/SubmitInput.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {defineMode} from "../../../stores/reducers/themeReducer.js";
 
-const firstName = "Arthur"
-const lastName = "Dias"
-
-
-function Profil(props) {
+function Profil({user}) {
     const dispatch = useDispatch()
     const mode = useSelector((state) => state.darkMode.value)
 
@@ -21,7 +17,7 @@ function Profil(props) {
 
     return (
         <Box className="flex flex-col items-center p-[20px] gap-[20px]">
-            <Typography fontSize={24}>Hello {firstName}, {lastName}</Typography>
+            <Typography fontSize={24}>Hello {user?.firstName || "Arthur"}, {user?.lastName || "DIAS"}</Typography>
             <Box className="flex flex-col">
                 <SwitchInput label={"Dark Mode"} value={mode} setValue={changeMode}/>
             </Box>

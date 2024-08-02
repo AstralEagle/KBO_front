@@ -4,35 +4,35 @@
     "code": "1214.2412.1241",
     "pay": "FR",
     "activity": "Société coopérative à responsabilité illimitée de droit public",
-    "adress": "40 Rue du Louvre, Paris"
+    "address": "40 Rue du Louvre, Paris"
   },
   {
     "name": "BNP Paribas",
     "code": "5678.9101.1121",
     "pay": "FR",
     "activity": "Banque",
-    "adress": "16 Boulevard des Italiens, Paris"
+    "address": "16 Boulevard des Italiens, Paris"
   },
   {
     "name": "Crédit Agricole",
     "code": "2345.6789.0123",
     "pay": "FR",
     "activity": "Banque coopérative",
-    "adress": "12 Place des États-Unis, Montrouge"
+    "address": "12 Place des États-Unis, Montrouge"
   },
   {
     "name": "HSBC France",
     "code": "3456.7890.1234",
     "pay": "FR",
     "activity": "Banque internationale",
-    "adress": "103 Avenue des Champs-Élysées, Paris"
+    "address": "103 Avenue des Champs-Élysées, Paris"
   },
   {
     "name": "La Banque Postale",
     "code": "4567.8901.2345",
     "pay": "FR",
     "activity": "Banque postale",
-    "adress": "115 Rue de Sèvres, Paris",
+    "address": "115 Rue de Sèvres, Paris",
     "phone": "0605349963",
     "email": "arthur.dias@live.fr",
     "fax": "0899634284",

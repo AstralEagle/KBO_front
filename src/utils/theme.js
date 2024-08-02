@@ -1,12 +1,10 @@
-import {amber, deepOrange, grey} from "@mui/material/colors";
 import {
-    DarkBackground,
-    DarkPrimary,
+    DarkBackground, DarkBackgroundHeader, DarkBackgroundSecondary,
     DarkSecondary,
     LightBackground,
     LightPrimary,
     LightSecondary,
-    LightSecondaryText
+    LightSecondaryText, White
 } from "./colors.js";
 
 const getDesignTokens = (mode) => ({
@@ -20,6 +18,7 @@ const getDesignTokens = (mode) => ({
             secondary: {main: LightSecondary},
             background: {
                 default: LightBackground,
+                secondary: White
             },
             background_header:{
                 default: DarkBackground,
@@ -37,19 +36,21 @@ const getDesignTokens = (mode) => ({
             // Palette DarkMode
             mode: "dark",
             primary: {
-                main: DarkPrimary
+                main: LightPrimary
             },
+            secondary: {main: LightSecondary},
             divider: {main: DarkSecondary},
             background: {
                 default: DarkBackground,
-                paper: deepOrange[900],
+                paper: DarkBackground,
+                secondary: DarkBackgroundSecondary
             },
             background_header:{
-                default: LightBackground,
+                default: DarkBackgroundHeader,
             },
             text: {
                 primary: '#fff',
-                secondary: grey[500],
+                secondary: LightSecondaryText
             },
             reversText: {
                 primary: "#000",

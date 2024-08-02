@@ -23,13 +23,21 @@ function Id(props) {
     if (society)
         return (
             <Box className="flex-1 flex flex-col gap-[60px] py-[40px] px-[80px]">
-                <Box className="flex">
+                <Box className="flex gap-[40px]">
                     <GlobalView society={society} id={realId}/>
                     <InfoView society={society}/>
                 </Box>
                 <FileView society={society}/>
             </Box>
         );
+    else
+        return (
+            <Box className="flex-1 flex flex-col items-center justify-center">
+                <Typography color="error" fontWeight={800} fontSize={78}>404</Typography>
+                <Typography color="text.primary" fontWeight={800} fontSize={48}>Society not found</Typography>
+            </Box>
+        )
+
 }
 
 export default Id;

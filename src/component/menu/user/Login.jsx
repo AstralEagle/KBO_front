@@ -4,7 +4,9 @@ import SubmitInput from "../../input/SubmitInput.jsx";
 import TextInput from "../../input/TextInput.jsx";
 import {Email, Password, Person, Search} from "@mui/icons-material";
 
-function Login(props) {
+function Login({
+                   login, signup
+               }) {
     const [isLogin, setIsLogin] = useState(true)
 
     const [email, setEmail] = useState("")
@@ -16,6 +18,14 @@ function Login(props) {
         setIsLogin((value) => !value)
     }
 
+    const loginSubmit = () => {
+        login(email, password)
+    }
+
+    const signupSubmit = () => {
+        signup(firstName, lastName, email, password)
+    }
+
 
     if(isLogin)
         return (
@@ -25,8 +35,7 @@ function Login(props) {
                     <TextInput icon={<Email/>} placeholder="Email" value={email} setValue={setEmail}/>
                     <TextInput password icon={<Password/>} placeholder="Password" value={password} setValue={setPassword}/>
                 </Box>
-                <SubmitInput value="Logout" onClick={() => {
-                    console.log("Logout")}}/>
+                <SubmitInput value="Logout" onClick={loginSubmit}/>
                 <Typography className="cursor-pointer" color="secondary" onClick={changeIsLogin}>Créer un compte</Typography>
             </Box>
         );
@@ -40,7 +49,7 @@ function Login(props) {
                     <TextInput icon={<Email/>} placeholder="Email" value={email} setValue={setEmail}/>
                     <TextInput password icon={<Password/>} placeholder="Password" value={password} setValue={setPassword}/>
                 </Box>
-                <SubmitInput value="Logout" onClick={() => setIsLogin((val) => !val)}/>
+                <SubmitInput value="Logout" onClick={signupSubmit}/>
                 <Typography className="cursor-pointer" color="secondary" onClick={changeIsLogin}>Se connecter</Typography>
             </Box>
         );
