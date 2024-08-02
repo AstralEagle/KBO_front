@@ -14,8 +14,10 @@ const useDataGetSocieties = () => {
     const isSearchable = Boolean(valueSearch && typeSearch);
 
     const filterInput = {
-        "By enterprise number": "by-enterprise-number",
-        "By enterprise name": "by-denomination",
+        "By enterprise number": "number",
+        "By enterprise name": "name",
+        "By enterprise activity": "activity",
+        "By enterprise address": "address",
     }
 
     useEffect(() => {
@@ -32,7 +34,7 @@ const useDataGetSocieties = () => {
                         setSocieties(data)
                 }
                 else{
-                    const data = (await axios.get(`${import.meta.env.VITE_URL_API}/data/enterprises/top20`)).data
+                    const data = (await axios.get(`${import.meta.env.VITE_URL_API}/data/`)).data
                     if (isOnCharge)
                         setSocieties(data)
                 }

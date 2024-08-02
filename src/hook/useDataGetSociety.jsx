@@ -5,11 +5,15 @@ const useDataGetSociety = (id) => {
     const [society, setSociety] = useState(null)
 
     useEffect(() => {
-
+        let isOnCharging = true;
         (async () => {
-            const data = (await axios.get(`${import.meta.env.VITE_API_URL}/search/scrapping/${id}`)).data;
-            setSociety(data)
+            const data = (await axios.get(`${import.meta.env.VITE_URL_API}/data/search/scrapping/${id}`)).data;
+            if (isOnCharging)
+                setSociety(data)
         })()
+        return () => {
+            isOnCharging = false
+        }
     }, [id])
 
     return {
