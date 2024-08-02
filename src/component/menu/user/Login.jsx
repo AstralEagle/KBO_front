@@ -35,7 +35,7 @@ function Login({
                     <TextInput icon={<Email/>} placeholder="Email" value={email} setValue={setEmail}/>
                     <TextInput password icon={<Password/>} placeholder="Password" value={password} setValue={setPassword}/>
                 </Box>
-                <SubmitInput value="Logout" onClick={loginSubmit}/>
+                <SubmitInput value="Login" onClick={loginSubmit}/>
                 <Typography className="cursor-pointer" color="secondary" onClick={changeIsLogin}>Créer un compte</Typography>
             </Box>
         );
@@ -49,7 +49,7 @@ function Login({
                     <TextInput icon={<Email/>} placeholder="Email" value={email} setValue={setEmail}/>
                     <TextInput password icon={<Password/>} placeholder="Password" value={password} setValue={setPassword}/>
                 </Box>
-                <SubmitInput value="Logout" onClick={signupSubmit}/>
+                <SubmitInput value="Signup" onClick={signupSubmit}/>
                 <Typography className="cursor-pointer" color="secondary" onClick={changeIsLogin}>Se connecter</Typography>
             </Box>
         );

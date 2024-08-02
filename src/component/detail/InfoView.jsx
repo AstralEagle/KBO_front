@@ -4,7 +4,7 @@ import {Box, Divider, Tab, Tabs, Typography, useTheme} from "@mui/material";
 function InfoView({society}) {
     const theme = useTheme()
 
-    const [tabValue, setTabValue] = useState(0)
+    const [tabValue, setTabValue] = useState(1)
 
     return (
         <Box className="flex flex-col py-[20px] rounded-[20px] min-w-[400px]" sx={{

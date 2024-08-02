@@ -42,7 +42,7 @@ function GlobalView({society, id}) {
                 {society.website &&
 
                     <Box className="flex gap-[10px] items-center cursor-pointer" onClick={() => {
-                        location.href = society.website
+                        location.href = society.website.split(" ")[0]
                     }}>
                         <Language sx={{color: "text.primary"}}/>
                         <Typography color="text.primary">{society.website}</Typography>
